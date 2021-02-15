@@ -14,13 +14,13 @@ def predict():
     '''
     For rendering results on HTML GUI
     '''
-    int_features = [int(x) for x in request.form.values()]
+    int_features = [float(x) for x in request.form.values()]
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
-
+    dict = {0:'VIP', 1:'New Customer', 2:'Transactor', 3:'Revolver'}
     output = round(prediction[0], 2)
 
-    return render_template('index.html', prediction_text='Employee Salary should be $ {}'.format(output))
+    return render_template('index.html', prediction_text='Customer is a {}'.format(dict[output]))
 
 @app.route('/predict_api',methods=['POST'])
 def predict_api():
