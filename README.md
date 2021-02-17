@@ -1,6 +1,6 @@
 # Customer-Market-Segmentation
 
-The main aim of this project is to segment Bank customers into different categories based on the data.<br>
+The main aim of this project is to segment bank customers into different categories based on the data.<br>
 ## The categories into which the customers fall are :
 1. Transactors
 2. Revolvers
